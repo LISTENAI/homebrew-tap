@@ -26,6 +26,14 @@
     arm: cskburn-darwin-arm64.tar.xz
     intel: cskburn-darwin-x64.tar.xz
 
+- name: ling
+  repo: LISTENAI/ling
+  file: Formula/ling.rb
+  type: formula-arch
+  assets:
+    arm: -aarch64-apple-darwin.tar.gz
+    intel: -x86_64-apple-darwin.tar.gz
+
 - name: cskburn-desktop
   repo: LISTENAI/cskburn-desktop
   file: Casks/cskburn-desktop.rb
