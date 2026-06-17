@@ -1,0 +1,35 @@
+# Managed projects — the single source of truth for the bump automation.
+# Add an entry here (and write its initial .rb once) to manage a new project;
+# scripts/bump.rb and the workflow need no changes for an existing type.
+#
+# Fields:
+#   name   - formula/cask token (and the value to pass to bump.rb)
+#   repo   - upstream GitHub repo to read releases from
+#   file   - the .rb to rewrite, relative to the repo root
+#   type   - formula      : single universal asset (version in the URL path)
+#            formula-arch : per-arch CLI, arm/intel each with their own asset
+#            cask         : per-arch GUI app (dmg)
+#   assets - asset name -> suffix matched (end_with?) against the release assets:
+#              formula:      a single "default"
+#              formula-arch: "arm" and "intel"
+#              cask:         "arm" and "intel"
+#
+# NOT managed here on purpose:
+#   - *-toolchain — pinned cross toolchains from LISTENAI/riscv-gnu-toolchain
+#     with non-standard tags; bumped by hand.
+
+- name: cskburn
+  repo: LISTENAI/cskburn
+  file: Formula/cskburn.rb
+  type: formula-arch
+  assets:
+    arm: cskburn-darwin-arm64.tar.xz
+    intel: cskburn-darwin-x64.tar.xz
+
+- name: cskburn-desktop
+  repo: LISTENAI/cskburn-desktop
+  file: Casks/cskburn-desktop.rb
+  type: cask
+  assets:
+    arm: -aarch64.dmg
+    intel: -x86_64.dmg
