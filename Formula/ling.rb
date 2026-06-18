@@ -1,15 +1,15 @@
 class Ling < Formula
   desc "ListenAI local CLI for account, models, chat, app management and docs search"
   homepage "https://github.com/LISTENAI/ling"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   if Hardware::CPU.arm?
     url "https://github.com/LISTENAI/ling/releases/download/v#{version}/ling-v#{version}-aarch64-apple-darwin.tar.gz"
-    sha256 "9436783e1a5e0076e12f51e91c4ea8a243e4e2dda5da571f4801720f10dd1466"
+    sha256 "9205ee71887a5a556f3c3e2a8f0a8aa8d9892098f556edcd28f1ceb11f779ece"
   else
     url "https://github.com/LISTENAI/ling/releases/download/v#{version}/ling-v#{version}-x86_64-apple-darwin.tar.gz"
-    sha256 "c1f8b3bc5e0423beb9e1f0678652b917402134e4b468160788f819bfc52e5fc4"
+    sha256 "7835e7536cdfd370463f82661d04f780f50166481844f16e7dbfb7078ad05325"
   end
 
   def install
