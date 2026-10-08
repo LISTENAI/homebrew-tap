@@ -41,3 +41,11 @@
   assets:
     arm: -aarch64.dmg
     intel: -x86_64.dmg
+
+- name: lisem
+  repo: LISTENAI/Lisem
+  file: Casks/lisem.rb
+  type: cask
+  assets:
+    arm: Lisem-darwin-aarch64.tar.gz
+    intel: Lisem-darwin-x86_64.tar.gz
