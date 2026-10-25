@@ -1,9 +1,9 @@
 cask "lisem" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.0.0"
-  sha256 arm:   "5404e3181c1ddffaa2bdef525ee4001d9412ab882bb2d704f79066d8ab0fa079",
-         intel: "cf85548f9a8934dafd2b1242a005156a249f92fa1c1d52b00978aaf413568593"
+  version "1.1.0"
+  sha256 arm:   "72af153d9e0a6f9f7b0ca9b6d5871999d9f35501dc221fabc43bf447cd4150f6",
+         intel: "7fa4e879dc783584b8e479f48077ab01ba5559b0d523c79e3c3fd1e63f689953"
 
   url "https://github.com/LISTENAI/Lisem/releases/download/v#{version}/Lisem-darwin-#{arch}.tar.gz"
   name "Lisem"
